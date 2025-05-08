@@ -1,0 +1,35 @@
+.page-container {
+  padding: 60px 20px;
+  margin-top: 100px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2e4d34;
+}
+
+.page-title {
+  font-size: 40px;
+  color: #2a5d3b;
+  margin-bottom: 20px;
+}
+
+.page-description {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}

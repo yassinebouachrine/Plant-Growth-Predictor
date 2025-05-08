@@ -1,19 +1,12 @@
-/* PlantPredictor.css */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-body {
-    /* background-image: url("2.png"); */
-    font-family: 'Poppins', sans-serif; /* Use Poppins as the font */
-    background: linear-gradient(to bottom, #ffffff, #d4edda);
-    color: #333; 
-    height: 100vh;
-}
-
 .plant-predictor-container {
-  max-width: 500px;
-  margin: 50px auto;
+  max-width: 400px;
+  height: 600px;
+  margin: 30px auto;
   background-color: transparent;
   padding: 25px;
+  flex: 1; /* take all available space */
+  padding: 20px;
+  overflow-y: auto; /* scroll only if needed */
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }

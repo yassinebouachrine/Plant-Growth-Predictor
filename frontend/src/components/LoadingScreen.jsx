@@ -1,20 +1,10 @@
+// src/components/LoadingScreen.jsx
 import React from 'react';
 import './LoadingScreen.css';
 
 const LoadingScreen = ({ onEnter }) => {
   return (
     <div className="loading-screen">
-      <div className="navbar">
-        <div className="logo">🌿</div>
-        <nav>
-          <a className="active" href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Model</a>
-          <a href="#">Contact</a>
-        </nav>
-        <div className="page-btn">Accueil</div>
-      </div>
-
       <div className="hero">
         <div className="highlight">Empowering Green Intelligence <span className="dot" /></div>
         <h1 className="nature-text">Nature</h1>

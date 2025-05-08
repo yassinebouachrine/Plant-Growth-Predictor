@@ -48,9 +48,8 @@ const PlantPredictor = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="plant-predictor-container">
-        <h2 className="title">Plant Growth Predictor 🌱</h2>
+        <h2 className="title">Plant Growth Predictor</h2>
         <form onSubmit={handleSubmit} className="form">
           <div className="form-group">
             <label>Soil Type:</label>

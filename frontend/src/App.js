@@ -1,21 +1,25 @@
 // src/App.js
-import React, { useState } from 'react';
-import PlantPredictor from './components/PlantPredictor';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 import LoadingScreen from './components/LoadingScreen';
+import PlantPredictor from './components/PlantPredictor';
+import About from './components/About';
+import Contact from './components/Contact';
 import './App.css';
 
-function App() {
-  const [showPredictor, setShowPredictor] = useState(false);
-
+const App = () => {
   return (
-    <div className="App">
-      {showPredictor ? (
-        <PlantPredictor />
-      ) : (
-        <LoadingScreen onEnter={() => setShowPredictor(true)} />
-      )}
-    </div>
+    <Router>
+      <Navbar /> {/* Appears on all pages */}
+      <Routes>
+        <Route path="/" element={<LoadingScreen />} />
+        <Route path="/model" element={<PlantPredictor />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
