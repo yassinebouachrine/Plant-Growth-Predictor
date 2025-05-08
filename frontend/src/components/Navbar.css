@@ -1,0 +1,22 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-size: 24px;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  color: rgb(41, 70, 41);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.navbar nav .active {
+  font-weight: 700;
+}
