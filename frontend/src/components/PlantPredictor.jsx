@@ -13,6 +13,7 @@ const PlantPredictor = () => {
   });
 
   const [prediction, setPrediction] = useState(null);
+  const [growthStage, setGrowthStage] = useState(null);  // For storing growth stage
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
@@ -23,6 +24,7 @@ const PlantPredictor = () => {
     e.preventDefault();
     setError(null);
     setPrediction(null);
+    setGrowthStage(null);  // Reset growth stage
 
     // Validate inputs
     const { Sunlight_Hours, Temperature, Humidity } = formData;
@@ -44,7 +46,12 @@ const PlantPredictor = () => {
       const response = await axios.post("http://localhost:8000/predict", dataToSend, {
         headers: { "Content-Type": "application/json" }
       });
-      setPrediction(response.data.predicted_growth_milestone);
+
+      // Extract predicted milestone and growth stage description
+      const { predicted_growth_milestone, growth_stage_description } = response.data;
+
+      setPrediction(predicted_growth_milestone);  // Set predicted growth milestone
+      setGrowthStage(growth_stage_description);   // Set growth stage description
     } catch (err) {
       console.error("Prediction error:", err.response ? err.response.data : err.message);
       setError("Something went wrong. Please check your input or the server.");
@@ -57,6 +64,7 @@ const PlantPredictor = () => {
       const timer = setTimeout(() => {
         setError(null);
         setPrediction(null);
+        setGrowthStage(null);  // Reset growth stage
       }, 4000);
       return () => clearTimeout(timer);
     }
@@ -138,7 +146,10 @@ const PlantPredictor = () => {
             {error ? (
               <p>{error}</p>
             ) : (
-              <p>Predicted Growth Milestone: 🌾 {prediction.toFixed(2)}</p>
+              <>
+                <p>Predicted Growth Milestone: 🌾 {prediction.toFixed(2)}</p>
+                <p>Growth Stage: {growthStage}</p>
+              </>
             )}
           </div>
         )}
