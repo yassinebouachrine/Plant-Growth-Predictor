@@ -4,7 +4,7 @@ import './Contact.css';
 const Contact = () => {
   return (
     <div className="page-container contact">
-      <h1 className="page-title">Contact Us 🍃</h1>
+      <h1 className="page-title">Contact Us</h1>
       <p className="page-description">
         We'd love to hear from you! Whether you have feedback, ideas, or just want to connect, 
         feel free to reach out.
