@@ -1,1 +1,0 @@
-# Plant Growth Predictor Project 
