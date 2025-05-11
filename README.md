@@ -71,6 +71,9 @@ An end-to-end web application that predicts plant growth milestones based on use
 |--------|-----------|--------------------------|
 | POST   | `/predict` | Predict plant growth stage |
 
+
+
+```md
 ### 📥 Example Request
 
 ```json
@@ -82,8 +85,11 @@ An end-to-end web application that predicts plant growth milestones based on use
   "Temperature": 24.0,
   "Humidity": 60.0
 }
-# 📸 UI Preview
-Coming soon
+
+
+## 📸 UI Preview
+
+![App UI](./UI.PNG)
 
 ## 📦 Built With
 - 🐍 **FastAPI** — Fast modern Python web framework
