@@ -1,12 +1,12 @@
-# 🌱 Plant Growth Predictor
+# Plant Growth Predictor
 
 An end-to-end web application that predicts plant growth milestones based on user input including sunlight, water frequency, fertilizer type, temperature, and humidity. Built using **FastAPI** for the backend and **React** for the frontend.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 🧠 Prerequisites
+### Prerequisites
 
 - Python 3.8+
 - Node.js & npm
@@ -14,7 +14,7 @@ An end-to-end web application that predicts plant growth milestones based on use
 
 ---
 
-## 🛠 Backend Setup (FastAPI)
+## Backend Setup (FastAPI)
 
 1. Navigate to backend folder:
     ```bash
@@ -44,7 +44,7 @@ An end-to-end web application that predicts plant growth milestones based on use
 
 ---
 
-## 💻 Frontend Setup (React)
+## Frontend Setup (React)
 
 1. Navigate to frontend folder:
     ```bash
@@ -87,18 +87,18 @@ An end-to-end web application that predicts plant growth milestones based on use
 }
 
 ```
-## 📸 UI Preview
+## UI Preview
 
 ![App UI](UI.PNG)
 
-## 📦 Built With
+## Built With
 - 🐍 **FastAPI** — Fast modern Python web framework
 - ⚛️ **React** — For building the frontend UI
 - 🔀 **CORS Middleware** — Cross-Origin setup
 - 🧪 **ML**: ML model for predictions (integrated in `model/`)
 
-## 📜 License
+## License
 This project is licensed under the MIT License.
 
-## 🙌 Acknowledgements
+## Acknowledgements
 Thanks to nature, science, and machine learning 💚.
