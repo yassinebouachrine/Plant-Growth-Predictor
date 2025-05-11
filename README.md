@@ -89,7 +89,7 @@ An end-to-end web application that predicts plant growth milestones based on use
 
 ## 📸 UI Preview
 
-![App UI](./UI.PNG)
+![App UI](UI.PNG)
 
 ## 📦 Built With
 - 🐍 **FastAPI** — Fast modern Python web framework
