@@ -1,0 +1,14 @@
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; /* Prevents scrolling or overflow */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #d4edda);
+
+  background: url('./components/background.png') ;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}

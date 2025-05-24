@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: bouachrineyassine/plant-growth-predictor:backend
+    container_name: plant-growth-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/model:/app/model:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+    networks:
+      - plant-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: bouachrineyassine/plant-growth-predictor:frontend
+    container_name: plant-growth-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - plant-network
+
+networks:
+  plant-network:
+    driver: bridge

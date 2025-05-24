@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: transparent;
+  align-items: center;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease-in-out;
+}
+
+.navbar .logo img {
+  width: 40px; /* Adjust logo size */
+  height: auto;
+  border-radius: 5px; /* Optional: makes the logo rounded */
+}
+
+/* Add circular hover animation to the logo */
+.navbar .logo:hover {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  color: rgb(41, 70, 41);
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: #4CAF50; /* Change color on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+.navbar nav .active {
+  font-weight: 700;
+  color: #388E3C; /* Active link color */
+}
