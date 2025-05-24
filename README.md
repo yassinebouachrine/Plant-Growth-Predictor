@@ -24,7 +24,6 @@ You can quickly get started by pulling the pre-built Docker image from Docker Hu
 ### Prerequisites
 
 * Docker installed (Engine and CLI)
-* (Optional) Docker Compose if you prefer compose commands
 
 ### Pulling the Image
 
