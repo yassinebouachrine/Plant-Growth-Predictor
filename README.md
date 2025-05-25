@@ -33,23 +33,6 @@ docker pull bouachrineyassine/plant-growth-predictor:backend
 docker pull bouachrineyassine/plant-growth-predictor:frontend
 ```
 
-### Running the Container
-
-```bash
-docker run -d \
-  --name plant-growth-predictor \
-  -p 8000:8000 \
-  -p 3000:3000 \
-  bouachrineyassine/plant-growth-predictor:latest
-```
-
-* **Backend** available at: `http://localhost:8000`
-* **Frontend** available at: `http://localhost:3000`
-
-> If ports `8000` or `3000` are already in use, change `-p host_port:container_port` accordingly.
-
----
-
 ## Running Backend and Frontend Containers Separately
 
 You can also run the backend and frontend as separate containers on a custom Docker network:
