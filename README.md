@@ -57,69 +57,6 @@ docker run -d \
   bouachrineyassine/plant-growth-predictor:frontend
 ```
 
----
-
-## Local Development
-
-If you want to run the application from source for development:
-
-### Clone the Repository
-
-```bash
-git clone https://github.com/yassinebouachrine/plant-growth-predictor.git
-cd plant-growth-predictor
-```
-
-### Backend Setup (FastAPI)
-
-1. Navigate to the backend folder:
-
-   ```bash
-   cd backend
-   ```
-
-2. Create and activate a virtual environment:
-
-   ```bash
-   python3 -m venv env
-   source env/bin/activate   # macOS/Linux
-   .\env\Scripts\activate  # Windows
-   ```
-
-3. Install Python dependencies:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. Start the FastAPI server:
-
-   ```bash
-   uvicorn app:app --reload --host 0.0.0.0 --port 8000
-   ```
-
-### Frontend Setup (React)
-
-1. In another terminal, navigate to the frontend folder:
-
-   ```bash
-   cd frontend
-   ```
-
-2. Install Node.js dependencies:
-
-   ```bash
-   npm install
-   ```
-
-3. Start the React development server:
-
-   ```bash
-   npm start
-   ```
-
----
-
 ## API Reference
 
 ### Predict Growth Stage
