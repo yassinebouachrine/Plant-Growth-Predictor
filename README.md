@@ -26,7 +26,7 @@ You can quickly get started by pulling the pre-built Docker image from Docker Hu
 
 * Docker installed (Engine and CLI)
   
-###Link to the images:
+### Link to the images:
 ```
 https://hub.docker.com/repository/docker/bouachrineyassine/plant-growth-predictor/general
 ```
