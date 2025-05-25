@@ -38,7 +38,7 @@ docker pull bouachrineyassine/plant-growth-predictor:frontend
 You can also run the backend and frontend as separate containers on a custom Docker network:
 
 ```bash
-# Create the network (if not already created)
+# Create the network 
 docker network create plant-network
 
 # Run the backend
