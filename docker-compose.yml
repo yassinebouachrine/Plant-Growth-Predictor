@@ -18,7 +18,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 30s
+      start_period: 40s
     restart: unless-stopped
     networks:
       - plant-network
@@ -37,7 +37,8 @@ services:
     restart: unless-stopped
     networks:
       - plant-network
-
+    environment:
+      - REACT_APP_API_URL=/api
 networks:
   plant-network:
     driver: bridge
