@@ -1,0 +1,81 @@
+.loading-screen {
+  height: 100vh;
+  width: 100vw;
+  color: #4CAF50;
+}
+
+.page-btn {
+  background-color: #f3c81a;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.2s; /* Smooth transition for the transform property */
+}
+
+.page-btn:hover {
+  transform: translateY(-3px); /* Move the button up by 3 pixels */
+}
+
+
+.hero {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  max-width: 600px;
+}
+
+.highlight {
+  background: rgba(242, 189, 189, 0.1);
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #f3c81a;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 10px;
+  transition: transform 0.2s; /* Smooth transition for the transform property */
+}
+
+.dot:hover {
+  transform: translateX(3px); /* Move the dot to the right by 3 pixels */
+}
+
+
+.nature-text {
+  font-size: 72px;
+  font-weight: 800;
+  margin: 10px 0;
+  color: #5da75f;
+  
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.circle-button {
+  height: 60px;
+  width: 60px;
+  background-color: #f3c81a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 30px;
+  cursor: pointer;
+}
+.circle-button:hover {
+  transform: translateX(3px); /* Move the dot to the right by 3 pixels */
+}
