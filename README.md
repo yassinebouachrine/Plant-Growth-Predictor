@@ -6,11 +6,12 @@ An end-to-end web application that predicts plant growth milestones based on use
 
 ### Prerequisites
 
-- Python 3.8+
-- Node.js & npm
-- Git
+* Python 3.8+
+* Node.js & npm
+* Git
 
 ---
+
 ## Overview
 
 This repository contains the source code and Docker configuration for the Plant Growth Predictor application. It exposes a REST API for predictions and a web UI to interact with the model.
@@ -28,7 +29,8 @@ You can quickly get started by pulling the pre-built Docker image from Docker Hu
 ### Pulling the Image
 
 ```bash
-docker pull bouachrineyassine/plant-growth-predictor:latest
+docker pull bouachrineyassine/plant-growth-predictor:backend
+docker pull bouachrineyassine/plant-growth-predictor:frontend
 ```
 
 ### Running the Container
@@ -48,7 +50,33 @@ docker run -d \
 
 ---
 
-## Local Development 
+## Running Backend and Frontend Containers Separately
+
+You can also run the backend and frontend as separate containers on a custom Docker network:
+
+```bash
+# Create the network (if not already created)
+docker network create plant-network
+
+# Run the backend
+docker run -d \
+  --name plant-growth-backend \
+  -p 8000:8000 \
+  --network plant-network \
+  bouachrineyassine/plant-growth-predictor:backend
+
+# Run the frontend
+docker run -d \
+  --name plant-growth-frontend \
+  -p 3000:80 \
+  --network plant-network \
+  -e REACT_APP_API_URL=http://plant-growth-backend:8000/api \
+  bouachrineyassine/plant-growth-predictor:frontend
+```
+
+---
+
+## Local Development
 
 If you want to run the application from source for development:
 
@@ -157,8 +185,6 @@ cd plant-growth-predictor
 
 ---
 
-
 ## Acknowledgements
 
 Thanks to nature, science, and machine learning 💚.
-
